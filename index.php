@@ -71,7 +71,7 @@
           <a class="nav-link" href="#contact">Contact Info</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="https://amcmorrow.com/gem/" target="_blank">Gemini Pro</a>
+          <a class="nav-link" href="https://amcmorrow.com/gem/" target="_blank">Gemini Project</a>
         </li>
     </div>
   </div>
