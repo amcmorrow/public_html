@@ -1,14 +1,22 @@
 <!DOCTYPE html>
-<html>
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="csrf-token" content="{{ csrf_token() }}">
 
+        <title>Andrew McMorrow - Ecommerce Specialist</title>
+        
+    <!-- UIkit CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.17.11/dist/css/uikit.min.css" />
+    <!-- UIkit JS -->
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.17.11/dist/js/uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.17.11/dist/js/uikit-icons.min.js"></script>
+    <!--Syntax Highlighting -->
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/styles/default.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js"></script>
 
-
-<head>
-  <!-- Required meta tags -->
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-container=no">
-
-  <!-- Bootstrap CSS -->
+      <!-- Bootstrap CSS -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
@@ -18,78 +26,33 @@
   <!-- UIkit CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.15.24/dist/css/uikit.min.css" />
 
-  <!-- Portfolio Site CSS -->
-
-<style>
-.container {
-  max-width: 500px;
-  margin: 0 auto;
-}
-
-.form-group {
-  margin-bottom: 15px;
-}
-
-.form-control {
-  width: 100%;
-}
-
-</style>
-
-
-  <title>Ecommerce Manager Portfolio</title>
-
 </head>
 
-<body>
+    <body class="antialiased">
+        <div class="relative sm:flex sm:justify-center sm:items-center min-h-screen bg-dots-darker bg-center bg-gray-100 selection:bg-red-500 selection:text-white">
+            @if (Route::has('login'))
+                <div class="sm:fixed sm:top-0 sm:right-0 p-6 text-right z-10">
+                    @auth
+                        <a href="{{ url('/home') }}" class="font-semibold text-gray-600 hover:text-gray-900 focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Home</a>
+                    @else
+                        <a href="{{ route('login') }}" class="font-semibold text-gray-600 hover:text-gray-900 focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Log in</a>
 
-  <!-- Header -->
-<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">Andrew McMorrow</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#about">Backstory</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#projects">Professional</a>
-        </li>
-       <li class="nav-item">
-          <a class="nav-link" href="/resume/">Resume</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#clients">Personal & Clients</a> 
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#contact">Contact Info</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="https://amcmorrow.com/gem/" target="_blank">Gemini Project</a>
-        </li>
-    </div>
-  </div>
-</nav>
+                        @if (Route::has('register'))
+                            <a href="{{ route('register') }}" class="ml-4 font-semibold text-gray-600 hover:text-gray-900 focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Register</a>
+                        @endif
+                    @endauth
+                </div>
+            @endif
+           
+            <x-navbar />
 
-
-  <!-- About Section -->
+             <!-- About Section -->
   <section id="about" class="uk-section uk-section-small">
     <div class="uk-container"><br><br>
-      <img class="uk-align-center" src="images/amm-signature.png" width="" height="" alt=""><br><br>
-      <h2 class="uk-text-center">Some background...</h2>
-      <p>Hello there. I'm Andrew McMorrow, an E-commerce Manager based in Minneapolis, MN. With a passion for technology and a love for the great outdoors, I've forged a unique path that blends creativity, problem-solving, and business acumen. My journey started in a small town where two rivers met, and there, I developed an insatiable curiosity and a deep appreciation for the natural world.
-<br><br>
-My career has been defined by a relentless pursuit of excellence in e-commerce management and digital marketing. Through my experiences at Revo Brands, I have optimized websites and wholesale dealer portals, utilizing data analysis and automation to drive sales and enhance user experiences. At Dakota Stones, I spearheaded successful ERP system migrations and website transitions, honing my technical skills and delivering measurable results. I have also contributed to the growth of businesses like Treasure Island, where I led digital media campaigns and managed website development and email marketing efforts.
-<br><br>
-With a degree in Visual Communications and a passion for continual learning, I stay ahead of the latest trends in e-commerce, user experience optimization, and data-driven decision making. My commitment to excellence and my ability to think outside the box have earned me a reputation as a savvy and valuable asset in the field.
-<br><br>
-Beyond my professional accomplishments, I remain grounded in the values instilled in me by my small-town upbringing. I'm grateful for the opportunities that have shaped my journey and inspired me to create innovative solutions that drive success for countless companies. My dedication to making a positive impact in the world, coupled with my adventurous spirit, fuels my unwavering passion for the thrill of the ride.</div>
+      <img class="uk-align-center" src="{{ asset('img/amm-signature.png') }}" width="" height="" alt=""><br><br>
+      <h2 class="uk-text-center">A bit of background...</h2>
+      <p>With over a decade of experience in digital marketing and e-commerce, I have had the privilege of leading digital marketing efforts for multiple companies. My expertise lies in overseeing campaigns, schedules, and website maintenance while utilizing my skills in UX design, database management, and ad set supervision to drive e-commerce success. Throughout my career, I have demonstrated a strong ability to lead and manage digital marketing and e-commerce operations at a strategic level, focusing on optimizing campaigns, enhancing user experiences, and leveraging data-driven insights to deliver measurable results.</p>
+      <p>My passion for innovation, coupled with my deep understanding of the ever-evolving digital landscape, enables me to develop and execute effective strategies that drive growth and profitability. I take pride in my ability to collaborate with cross-functional teams, bringing a strategic vision and hands-on approach to every project I undertake. As I continue to grow and evolve in my career, I remain dedicated to leveraging my expertise to help businesses thrive in the digital age, confident in my ability to make a significant impact in the field of digital marketing and e-commerce.</p></div>
   </section>
 
   <!-- Professional Projects Section -->
@@ -102,16 +65,15 @@ Beyond my professional accomplishments, I remain grounded in the values instille
   <section id="projects" class="uk-section uk-section-small">
     <div class="uk-container">
 <div class="row">
-      <h2 class="uk-text-center">Full Time Work</h2>
-       <p>During the past decade, or more, of my career, I had the privilege of working full-time for several companies, leading their digital marketing endeavors. My role primarily revolved around overseeing campaigns, coordinating schedules, and maintaining website updates. This encompassed a wide spectrum of my skill sets, spanning from UX design to proficient database management and efficient ad set supervision. Reflecting on this journey, I express profound gratitude to these employers who provided invaluable opportunities. I take pride in the accomplishments achieved during these collaborations and hold in high regard the skills honed through these transformative experiences.</p>
-        <div class="uk-flex uk-flex-center"><a href="/resume/" target="_blank" class="btn btn-primary" style="width:50%;">View Resume</a></div>
+    <h2 class="uk-text-center">Full Time Work</h2>
+      <div class="uk-flex uk-flex-center"><a href="/resume/" target="_blank" class="btn btn-primary" style="width:50%;">View Resume</a></div>
 </div>
      
 <br><br>
 <div class="row">
   <div class="col-sm-6">
  <div class="card">
- <img src="/logos/revobrands-logo-950x225.png" class="card-img-top" alt="Revo Brands">
+ <img src="{{ asset('img/revobrands-logo-950x225.png') }}" class="card-img-top" alt="Revo Brands">
   <div class="card-body">
     <h4 class="card-title">Revo Brands</h4>
     <h6 class="card-subtitle mb-2 text-muted">Web Design, UX Design</h6>
@@ -122,7 +84,7 @@ Beyond my professional accomplishments, I remain grounded in the values instille
   </div>
   <div class="col-sm-6">
  <div class="card">
-  <img src="/logos/realavid-logo-950x225.png" class="card-img-top" alt="Real Avid">
+  <img src="{{ asset('img/realavid-logo-950x225.png') }}" class="card-img-top" alt="Real Avid">
   <div class="card-body">
     <h4 class="card-title">Real Avid</h4>
     <h6 class="card-subtitle mb-2 text-muted">SEO, UX Design, Email Marketing</h6>
@@ -136,7 +98,7 @@ Beyond my professional accomplishments, I remain grounded in the values instille
   <div class="row">
   <div class="col-sm-6">
  <div class="card">
-  <img src="/logos/outdooredge-logo-950x225.png" class="card-img-top" alt="Outdoor Edge">
+  <img src="{{ asset('img/outdooredge-logo-950x225.png') }}" class="card-img-top" alt="Outdoor Edge">
   <div class="card-body">
     <h4 class="card-title">Outdoor Edge</h4>
     <h6 class="card-subtitle mb-2 text-muted">UX Design, SEO, Email Marketing</h6>
@@ -147,7 +109,21 @@ Beyond my professional accomplishments, I remain grounded in the values instille
   </div>
   <div class="col-sm-6">
  <div class="card">
-  <img src="/logos/dakotastones-logo-950x225.png" class="card-img-top" alt="Dakota Stones">
+  <img src="{{ asset('img/workiqtools-logo-950x225.png') }}" class="card-img-top" alt="WorkIQ Tools">
+  <div class="card-body">
+    <h4 class="card-title">WorkIQ Tools</h4>
+    <h6 class="card-subtitle mb-2 text-muted">Brand Development, Web Design, SEO, Email Marketing</h6>
+        <p class="card-text">The world’s smartest bench vise system is transforming the way DIYers, craftsmen, hobbyists, makers, and pros work. The IQ Vise System’s three parts combine to help you solve problems. The IQ Vise articulates and rotates 360 degrees for optimal work positioning. Task-specific IQ Vise Jaws grip varying materials. And, IQ Connect plug-and-play accessories are an extra set of hands. Let The IQ Vise System help you work faster, easier, and smarter.</p>
+        <a href="https://workiqtools.com" target="_blank" class="btn btn-primary">Visit WorkIQTools.com</a>
+      </div>
+    </div>
+  </div>
+</div>
+<br>
+<div class="row">
+ <div class="col-sm-6">
+ <div class="card">
+  <img src="{{ asset('img/dakotastones-logo-950x225.png') }}" class="card-img-top" alt="Dakota Stones">
   <div class="card-body">
     <h4 class="card-title">Dakota Stones</h4>
     <h6 class="card-subtitle mb-2 text-muted">ERP, Web Development, Email Marketing</h6>
@@ -156,12 +132,9 @@ Beyond my professional accomplishments, I remain grounded in the values instille
       </div>
     </div>
   </div>
-</div>
-<br>
-<div class="row">
- <div class="col-sm-6">
- <div class="card">
-  <img src="/logos/goodybeads-logo-950x225.png" class="card-img-top" alt="Goody Beads">
+  <div class="col-sm-6">
+  <div class="card">
+  <img src="{{ asset('img/goodybeads-logo-950x225.png') }}" class="card-img-top" alt="Goody Beads">
   <div class="card-body">
     <h4 class="card-title">Goody Beads</h4>
     <h6 class="card-subtitle mb-2 text-muted">Database Management, Web Design, Email Marketing</h6>
@@ -170,9 +143,12 @@ Beyond my professional accomplishments, I remain grounded in the values instille
       </div>
     </div>
   </div>
-  <div class="col-sm-6">
+</div>
+<br>
+<div class="row">
+ <div class="col-sm-6">
  <div class="card">
-  <img src="/logos/ticasino-logo-950x225.png" class="card-img-top" alt="Treasure Island Casino">
+  <img src="{{ asset('img/ticasino-logo-950x225.png') }}" class="card-img-top" alt="Treasure Island Casino">
   <div class="card-body">
     <h4 class="card-title">Treasure Island Casino</h4>
     <h6 class="card-subtitle mb-2 text-muted">Email Marketing, Video Graphics, SEO</h6>
@@ -180,22 +156,19 @@ Beyond my professional accomplishments, I remain grounded in the values instille
         <a href="https://ticasino.com" target="_blank" class="btn btn-primary">Visit TIcasino.com</a>
       </div>
     </div>
-  </div>
 </div>
-<br>
-<div class="row">
  <div class="col-sm-6">
  <div class="card">
-  <img src="/logos/ainsleyshea-logo-950x225.png" class="card-img-top" alt="Ainsley Shea">
+  <img src="{{ asset('img/ainsleyshea-logo-950x225.png') }}" class="card-img-top" alt="Ainsley Shea">
   <div class="card-body">
     <h4 class="card-title">Ainsley Shea</h4>
     <h6 class="card-subtitle mb-2 text-muted">Web Design, Brand Development</h6>
         <p class="card-text">Our method is a bit different. We don't want to throw tactics at you. We sit down with a white board with your key people and get everyone to understand the story.</p>
         <a href="https://web.archive.org/web/20120326013420/http://www.ainsleyshea.com/" target="_blank" class="btn btn-primary">Visit AinselyShea.com</a>
-      </div>
+        </div>
     </div>
-  </div>      
-      </div>
+  </div>
+</div>
     </div>
   </section>
   
@@ -230,7 +203,7 @@ Beyond my professional accomplishments, I remain grounded in the values instille
       <div class="card-body">
         <h4 class="card-title">Driftless Camp Website</h4>
         <p class="card-text">Crafting a successful WordPress website for a client involved several essential steps. The process started with setting up a hosting account and installing WordPress, followed by choosing the ideal theme from a vast collection of options. Customization, page and post creation, plugin integration, and menu organization resulted in a fully functional website ready for launch after thorough testing.</p>
-        <a href="https://driftlesscamp.com" target="_blank" class="btn btn-primary">Visit Driftlesscamp.com</a>
+        <a href="/" target="_blank" class="btn btn-primary">Site Archived</a>
       </div>
     </div>
   </div>
@@ -239,7 +212,7 @@ Beyond my professional accomplishments, I remain grounded in the values instille
       <div class="card-body">
         <h4 class="card-title">Bellflower Bodywork Website</h4>
         <p class="card-text">The process of developing a massage therapy website for a client was a well-planned and executed project. Every step was taken to ensure the website was not only functional but also visually appealing to visitors. However, due to unforeseen circumstances, the website had to be taken down. Despite the setback, I remain committed to working with the client to find a solution to bring the site back online in the future.</p>
-        <a href="http://bellflowerbodywork.com" target="_blank" class="btn btn-primary">Visit Bellflowerbodywork.com</a>
+        <a href="/" target="_blank" class="btn btn-primary">Site Archived</a>
       </div>
     </div>
   </div>
@@ -250,13 +223,31 @@ Beyond my professional accomplishments, I remain grounded in the values instille
     <div class="card">
       <div class="card-body">
         <h4 class="card-title">Focused Fire Website</h4>
-        <p class="card-text">Firstly, a hosting account was set up and WordPress was installed, followed by choosing a fitting theme from the vast collection available. The chosen theme was then customized using the theme editor or custom CSS to bring the client's vision to life. Pages and posts were added, and functionality was enhanced through the use of plugins for features like contact forms, social media, and e-commerce. A navigation menu was created to make navigation easy for visitors, and the website was thoroughly tested before it was launched. The end result was a well-rounded and functional website that accurately reflected the client's laser engraving business.</p>
-        <a href="http://focusedfireengraving.com" target="_blank" class="btn btn-primary">Visit focusedfireengraving.com</a>
+        <p class="card-text">A hosting account was set up and WordPress was installed, followed by choosing a fitting theme from the vast collection available. The chosen theme was then customized using the theme editor or custom CSS to bring the client's vision to life. Pages and posts were added, and functionality was enhanced through the use of plugins for features like contact forms, social media, and e-commerce. A navigation menu was created to make navigation easy for visitors, and the website was thoroughly tested before it was launched. The end result was a well-rounded and functional website that accurately reflected the client's laser engraving business.</p>
+        <a href="/" target="_blank" class="btn btn-primary">Site Archived</a>
       </div>
     </div>
   </div>
-</div>      
+  <div class="col-sm-6">
+    <div class="card">
+      <div class="card-body">
+        <h4 class="card-title">Fish Lake Coffee</h4>
+        <p class="card-text">As part of our entrepreneurial journey, we established our own LLC to sell home-roasted coffee, leveraging the power of Shopify as our e-commerce platform. To create a compelling online presence, we carefully selected a theme that aligned with our brand vision and customized it using the theme editor and custom CSS. We added essential pages and posts, and enhanced the website's functionality by integrating plugins for contact forms, social media, and e-commerce. To ensure a seamless user experience, we created an intuitive navigation menu and thoroughly tested the website before launch. The result was a professional, well-rounded, and fully functional website that effectively showcased our unique coffee offerings and reflected our passion for quality and craftsmanship.</p>
+        <a href="http://fishlakecoffee.com" target="_blank" class="btn btn-primary">Visit fishlakecoffee.com</a>
       </div>
+    </div>
+  </div>
+  <br>
+ <div class="col-sm-6">
+    <div class="card">
+      <div class="card-body">
+        <h4 class="card-title">o0barkbarkbark0o Website</h4>
+        <p class="card-text">Recording my music and doing web design and developments is a passion of mine. This is my personal site that is always a work in progress, but will usually host some of my music on a wordpress site.</p>
+        <a href="http://o0barkbarkbark0o.amcmorrow.com" target="_blank" class="btn btn-primary">Visit o0barkbarkbark0o</a>
+      </div>
+    </div>
+  </div>
+</div>
     </div>
   </section>
   
@@ -268,22 +259,20 @@ Beyond my professional accomplishments, I remain grounded in the values instille
     <!--Section description-->
     <p class="text-center w-responsive mx-auto mb-5">Do you have any questions? Please do not hesitate to contact me directly. I will get back to you within a matter of hours to help.</p>
 
-<form action="contact-form.php" method="post" class="container">
-  <div class="form-group">
-    <label for="email">Email:</label>
-    <input type="email" class="form-control" id="email" name="email" required>
-  </div>
-  <div class="form-group">
-    <label for="subject">Subject:</label>
-    <input type="text" class="form-control" id="subject" name="subject" required>
-  </div>
-  <div class="form-group">
-    <label for="message">Message:</label>
-    <textarea class="form-control" id="message" name="message" required></textarea>
-  </div>
-  <input type="submit" value="Send" class="btn btn-primary">
-</form>
-<br>
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/65ccccf80ff6374032cd624e/1hmk01asf';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script-->
+
 <div class="uk-text-center">
 <strong>Email:</strong> <a href="mailto:andrew.michael.mcmorrow@gmail.com">andrew.michael.mcmorrow@gmail.com</a><br>
 <strong>Phone:</strong> <a href="tel:6123848959">612-384-8959</a><br>
@@ -291,9 +280,5 @@ Beyond my professional accomplishments, I remain grounded in the values instille
 </div>
 </div>
   </section>
-  
-  
 
-  <!-- Footer -->
-  <footer class="uk-section uk-section-small uk-text-center">
-    <p>Copyright &copy; 2023 | Andrew McMorrow</p
+  <x-footer />
