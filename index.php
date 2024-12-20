@@ -62,16 +62,13 @@
           <a class="nav-link" href="#projects">Professional</a>
         </li>
        <li class="nav-item">
-          <a class="nav-link" href="/resume/">Resume</a>
+          <a class="nav-link" href="/project/resume/">Resume</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#clients">Personal & Clients</a> 
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#contact">Contact Info</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="https://amcmorrow.com/gem/" target="_blank">Gemini Project</a>
         </li>
     </div>
   </div>
@@ -81,7 +78,7 @@
   <!-- About Section -->
   <section id="about" class="uk-section uk-section-small">
     <div class="uk-container"><br><br>
-      <img class="uk-align-center" src="images/amm-signature.png" width="" height="" alt=""><br><br>
+      <img class="uk-align-center" src="/project/images/amm-signature.png" width="" height="" alt=""><br><br>
       <h2 class="uk-text-center">Some background...</h2>
       <p>Hello there. I'm Andrew McMorrow, an E-commerce Manager based in Minneapolis, MN. With a passion for technology and a love for the great outdoors, I've forged a unique path that blends creativity, problem-solving, and business acumen. My journey started in a small town where two rivers met, and there, I developed an insatiable curiosity and a deep appreciation for the natural world.
 <br><br>
@@ -106,12 +103,12 @@ Beyond my professional accomplishments, I remain grounded in the values instille
        <p>During the past decade, or more, of my career, I had the privilege of working full-time for several companies, leading their digital marketing endeavors. My role primarily revolved around overseeing campaigns, coordinating schedules, and maintaining website updates. This encompassed a wide spectrum of my skill sets, spanning from UX design to proficient database management and efficient ad set supervision. Reflecting on this journey, I express profound gratitude to these employers who provided invaluable opportunities. I take pride in the accomplishments achieved during these collaborations and hold in high regard the skills honed through these transformative experiences.</p>
         <div class="uk-flex uk-flex-center"><a href="/resume/" target="_blank" class="btn btn-primary" style="width:50%;">View Resume</a></div>
 </div>
-     
+
 <br><br>
 <div class="row">
   <div class="col-sm-6">
  <div class="card">
- <img src="/logos/revobrands-logo-950x225.png" class="card-img-top" alt="Revo Brands">
+ <img src="/project/logos/revobrands-logo-950x225.png" class="card-img-top" alt="Revo Brands">
   <div class="card-body">
     <h4 class="card-title">Revo Brands</h4>
     <h6 class="card-subtitle mb-2 text-muted">Web Design, UX Design</h6>
@@ -122,7 +119,7 @@ Beyond my professional accomplishments, I remain grounded in the values instille
   </div>
   <div class="col-sm-6">
  <div class="card">
-  <img src="/logos/realavid-logo-950x225.png" class="card-img-top" alt="Real Avid">
+  <img src="/project/logos/realavid-logo-950x225.png" class="card-img-top" alt="Real Avid">
   <div class="card-body">
     <h4 class="card-title">Real Avid</h4>
     <h6 class="card-subtitle mb-2 text-muted">SEO, UX Design, Email Marketing</h6>
@@ -136,7 +133,7 @@ Beyond my professional accomplishments, I remain grounded in the values instille
   <div class="row">
   <div class="col-sm-6">
  <div class="card">
-  <img src="/logos/outdooredge-logo-950x225.png" class="card-img-top" alt="Outdoor Edge">
+  <img src="/project/logos/outdooredge-logo-950x225.png" class="card-img-top" alt="Outdoor Edge">
   <div class="card-body">
     <h4 class="card-title">Outdoor Edge</h4>
     <h6 class="card-subtitle mb-2 text-muted">UX Design, SEO, Email Marketing</h6>
@@ -147,7 +144,7 @@ Beyond my professional accomplishments, I remain grounded in the values instille
   </div>
   <div class="col-sm-6">
  <div class="card">
-  <img src="/logos/dakotastones-logo-950x225.png" class="card-img-top" alt="Dakota Stones">
+  <img src="/project/logos/dakotastones-logo-950x225.png" class="card-img-top" alt="Dakota Stones">
   <div class="card-body">
     <h4 class="card-title">Dakota Stones</h4>
     <h6 class="card-subtitle mb-2 text-muted">ERP, Web Development, Email Marketing</h6>
@@ -161,7 +158,7 @@ Beyond my professional accomplishments, I remain grounded in the values instille
 <div class="row">
  <div class="col-sm-6">
  <div class="card">
-  <img src="/logos/goodybeads-logo-950x225.png" class="card-img-top" alt="Goody Beads">
+  <img src="/project/logos/goodybeads-logo-950x225.png" class="card-img-top" alt="Goody Beads">
   <div class="card-body">
     <h4 class="card-title">Goody Beads</h4>
     <h6 class="card-subtitle mb-2 text-muted">Database Management, Web Design, Email Marketing</h6>
@@ -172,7 +169,7 @@ Beyond my professional accomplishments, I remain grounded in the values instille
   </div>
   <div class="col-sm-6">
  <div class="card">
-  <img src="/logos/ticasino-logo-950x225.png" class="card-img-top" alt="Treasure Island Casino">
+  <img src="/project/logos/ticasino-logo-950x225.png" class="card-img-top" alt="Treasure Island Casino">
   <div class="card-body">
     <h4 class="card-title">Treasure Island Casino</h4>
     <h6 class="card-subtitle mb-2 text-muted">Email Marketing, Video Graphics, SEO</h6>
@@ -186,7 +183,7 @@ Beyond my professional accomplishments, I remain grounded in the values instille
 <div class="row">
  <div class="col-sm-6">
  <div class="card">
-  <img src="/logos/ainsleyshea-logo-950x225.png" class="card-img-top" alt="Ainsley Shea">
+  <img src="/project/logos/ainsleyshea-logo-950x225.png" class="card-img-top" alt="Ainsley Shea">
   <div class="card-body">
     <h4 class="card-title">Ainsley Shea</h4>
     <h6 class="card-subtitle mb-2 text-muted">Web Design, Brand Development</h6>
@@ -230,7 +227,7 @@ Beyond my professional accomplishments, I remain grounded in the values instille
       <div class="card-body">
         <h4 class="card-title">Driftless Camp Website</h4>
         <p class="card-text">Crafting a successful WordPress website for a client involved several essential steps. The process started with setting up a hosting account and installing WordPress, followed by choosing the ideal theme from a vast collection of options. Customization, page and post creation, plugin integration, and menu organization resulted in a fully functional website ready for launch after thorough testing.</p>
-        <a href="https://driftlesscamp.com" target="_blank" class="btn btn-primary">Visit Driftlesscamp.com</a>
+        <a href="/" target="_blank" class="btn btn-primary">Site Archived</a>
       </div>
     </div>
   </div>
@@ -239,7 +236,7 @@ Beyond my professional accomplishments, I remain grounded in the values instille
       <div class="card-body">
         <h4 class="card-title">Bellflower Bodywork Website</h4>
         <p class="card-text">The process of developing a massage therapy website for a client was a well-planned and executed project. Every step was taken to ensure the website was not only functional but also visually appealing to visitors. However, due to unforeseen circumstances, the website had to be taken down. Despite the setback, I remain committed to working with the client to find a solution to bring the site back online in the future.</p>
-        <a href="http://bellflowerbodywork.com" target="_blank" class="btn btn-primary">Visit Bellflowerbodywork.com</a>
+        <a href="/" target="_blank" class="btn btn-primary">Site Archived</a>
       </div>
     </div>
   </div>
@@ -250,13 +247,31 @@ Beyond my professional accomplishments, I remain grounded in the values instille
     <div class="card">
       <div class="card-body">
         <h4 class="card-title">Focused Fire Website</h4>
-        <p class="card-text">Firstly, a hosting account was set up and WordPress was installed, followed by choosing a fitting theme from the vast collection available. The chosen theme was then customized using the theme editor or custom CSS to bring the client's vision to life. Pages and posts were added, and functionality was enhanced through the use of plugins for features like contact forms, social media, and e-commerce. A navigation menu was created to make navigation easy for visitors, and the website was thoroughly tested before it was launched. The end result was a well-rounded and functional website that accurately reflected the client's laser engraving business.</p>
-        <a href="http://focusedfireengraving.com" target="_blank" class="btn btn-primary">Visit focusedfireengraving.com</a>
+        <p class="card-text">A hosting account was set up and WordPress was installed, followed by choosing a fitting theme from the vast collection available. The chosen theme was then customized using the theme editor or custom CSS to bring the client's vision to life. Pages and posts were added, and functionality was enhanced through the use of plugins for features like contact forms, social media, and e-commerce. A navigation menu was created to make navigation easy for visitors, and the website was thoroughly tested before it was launched. The end result was a well-rounded and functional website that accurately reflected the client's laser engraving business.</p>
+        <a href="/" target="_blank" class="btn btn-primary">Site Archived</a>
       </div>
     </div>
   </div>
-</div>      
+  <div class="col-sm-6">
+    <div class="card">
+      <div class="card-body">
+        <h4 class="card-title">Fish Lake Coffee</h4>
+        <p class="card-text">As part of our entrepreneurial journey, we established our own LLC to sell home-roasted coffee, leveraging the power of Shopify as our e-commerce platform. To create a compelling online presence, we carefully selected a theme that aligned with our brand vision and customized it using the theme editor and custom CSS. We added essential pages and posts, and enhanced the website's functionality by integrating plugins for contact forms, social media, and e-commerce. To ensure a seamless user experience, we created an intuitive navigation menu and thoroughly tested the website before launch. The result was a professional, well-rounded, and fully functional website that effectively showcased our unique coffee offerings and reflected our passion for quality and craftsmanship.</p>
+        <a href="http://fishlakecoffee.com" target="_blank" class="btn btn-primary">Visit fishlakecoffee.com</a>
       </div>
+    </div>
+  </div>
+  <br>
+ <div class="col-sm-6">
+    <div class="card">
+      <div class="card-body">
+        <h4 class="card-title">o0barkbarkbark0o Website</h4>
+        <p class="card-text">Recording my music and doing web design and developments is a passion of mine. This is my personal site that is always a work in progress, but will usually host some of my music on a wordpress site.</p>
+        <a href="http://o0barkbarkbark0o.amcmorrow.com" target="_blank" class="btn btn-primary">Visit o0barkbarkbark0o</a>
+      </div>
+    </div>
+  </div>
+</div>
     </div>
   </section>
   
