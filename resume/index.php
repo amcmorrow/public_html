@@ -32,22 +32,19 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="https://amcmorrow.com/">Home</a>
+          <a class="nav-link active" aria-current="page" href="https://amcmorrow.com/project/">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="https://amcmorrow.com/#about">Backstory</a>
+          <a class="nav-link" href="https://amcmorrow.com/project#about">Backstory</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="https://amcmorrow.com/#projects">Professional</a>
+          <a class="nav-link" href="https://amcmorrow.com/project#projects">Professional</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="https://amcmorrow.com/#clients">Personal & Clients</a> 
+          <a class="nav-link" href="https://amcmorrow.com/project#clients">Personal & Clients</a> 
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="https://amcmorrow.com/#contact">Contact Info</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="https://skynet.amcmorrow.com" target="_blank">Chatbot</a>
+          <a class="nav-link" href="https://amcmorrow.com/project#contact">Contact Info</a>
         </li>
     </div>
   </div>
